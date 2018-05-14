@@ -23,6 +23,7 @@
 import api from '~/assets/api.js'
 export default {
   layout: 'layout',
+  transition: 'page',
   asyncData ({}){
     return api.getArticles('admin').then(res=>{
       return {list: res.list}
@@ -33,11 +34,6 @@ export default {
       list:[],
       viewIndex:null
     }
-  },
-  created(){
-    // api.getArticles('admin').then(res=>{
-    //   this.list=res.list
-    // })
   },
   methods:{
     changeIndex(index){

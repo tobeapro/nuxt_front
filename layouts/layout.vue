@@ -8,9 +8,9 @@
               {{info.name}}
               <img class="user-avatar" :src="info.avatar" />
             </span>
-            <ul>
-              <li>
-                首页
+            <ul class="nav-ul">
+              <li class="nav-li" v-for="(item,index) in menuList" :key="index">
+                <a :href="item.url" :class="{'active': menuActive === item.url}">{{item.name}}</a>
               </li>
             </ul>
           </div>
@@ -29,15 +29,27 @@ import api from '~/assets/api.js'
 export default {
   asyncData ({}){
     return api.getInfo('admin').then(res=>{
-      return {info: res.data}
+      return { info: res.data }
     })
+  },
+  computed: {
+    menuActive () {
+      return this.$route.path
+    }
   },
   data () {
     return {
       info:{
         name:'',
         avatar:''
-      }
+      },
+      menuList:[
+        {name:'首页',url:"/"},
+        {name:'博文',url:"/blog"},
+        {name:'V2',url:"/v2ex"},
+        {name:'新闻',url:"/news"},
+        {name:'AC杂文',url:"/acfun"}
+      ]
     }
   },
   created () {
@@ -92,5 +104,21 @@ export default {
     margin-right:20px;
     width:40px;
     height:40px;
+  }
+  .nav-ul,.nav-li{
+    list-style: none;
+  }
+  .nav-li{
+    display:inline-block;
+  }
+  .nav-li a{
+    text-decoration: none;
+    padding:4px 12px;
+    color:#000;
+    border-radius: 4px;
+  }
+  .nav-li a.active{
+    color:#fff;
+    background-color:#000;
   }
 </style>
