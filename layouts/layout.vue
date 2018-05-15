@@ -25,6 +25,7 @@
   </div>
 </template>
 <script>
+import user from '~/assets/img/user.png'
 import api from '~/assets/api.js'
 export default {
   asyncData ({}){
@@ -34,19 +35,19 @@ export default {
   },
   computed: {
     menuActive () {
-      return this.$route.path
+      return '/'+this.$route.path.split('/')[1]
     }
   },
   data () {
     return {
       info:{
         name:'',
-        avatar:''
+        avatar:user
       },
       menuList:[
         {name:'首页',url:"/"},
         {name:'博文',url:"/blog"},
-        {name:'V2',url:"/v2ex"},
+        {name:'CNode',url:"/cnode"},
         {name:'新闻',url:"/news"},
         {name:'AC杂文',url:"/acfun"}
       ]
@@ -86,6 +87,7 @@ export default {
     box-shadow: 0 2px 10px #aaa;
   }
   .rk-main{
+    position:relative;
     margin-top:80px;
     min-height:calc(100vh - 100px);
   }
@@ -105,7 +107,7 @@ export default {
     width:40px;
     height:40px;
   }
-  .nav-ul,.nav-li{
+  ul,li{
     list-style: none;
   }
   .nav-li{

@@ -4,3 +4,7 @@
 .page-enter, .page-leave-active {
   opacity: 0;
 }
+.cnode{
+  color:#80bd01;
+  background-color:#303030;
+}
