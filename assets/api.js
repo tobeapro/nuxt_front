@@ -19,5 +19,32 @@ export default {
         reject(err)
       })
     })
+  },
+  getCnodeList: () => {
+    return new Promise((resolve,reject)=>{
+      axios.get('https://cnodejs.org/api/v1/topics?page=1').then(res=>{
+        resolve(res.data)
+      }).catch(err=>{
+        reject(err)
+      })
+    })
+  },
+  getCodeDetail: (id) => {
+    return new Promise((resolve,reject)=>{
+      axios.get(`https://cnodejs.org/api/v1/topic/${id}`).then(res=>{
+        resolve(res.data)
+      }).catch(err=>{
+        reject(err)
+      })
+    })
+  },
+  getNewsList: () => {
+    return new Promise((resolve,reject)=>{
+      axios.get(host + 'front_manage/api/getNews').then(res=>{
+        resolve(res.data)
+      }).catch(err=>{
+        reject(err)
+      })
+    })
   }
 }
