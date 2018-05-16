@@ -1,6 +1,11 @@
 <template>
   <div class="news">
-    <div class="news-item" v-for="(item,index) in list" :key="index">
+    <ul class="news-nav">
+      <li class="news-nav-item" v-for="(item,index) in list" :key="index" :title="item.title">
+        <a :href="'#'+item._id">{{index+1}}·{{item.title}}</a>
+      </li>
+    </ul>
+    <div class="news-item" v-for="(item,index) in list" :key="index" :id="item._id">
       <div class="news-item-title">
         {{item.title}}
       </div>
@@ -32,6 +37,37 @@ export default {
 }
 </script>
 <style>
+.news-nav{
+  transition: all .2s linear;
+  position:fixed;
+  right:0;
+  top:50%;
+  padding:10px;
+  width:100px;
+  transform: translateY(-50%);
+  background-color:#1c99ff;
+  opacity:.4;
+  border-radius: 6px;
+}
+.news-nav:hover{
+  width:300px;
+  opacity:1;
+}
+.news-nav-item{
+  font-size:12px;
+}
+.news-nav-item a{
+  display: block;
+  line-height:26px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  color:#fff;
+}
+.news-nav-item a:hover{
+  text-decoration: underline;
+}
 .news-item{
   margin-bottom:20px;
   padding-bottom:20px;
