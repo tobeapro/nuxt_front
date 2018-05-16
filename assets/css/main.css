@@ -5,6 +5,7 @@
   opacity: 0;
 }
 .cnode{
+  min-height:calc(100vh - 100px);
   color:#80bd01;
   background-color:#303030;
 }
