@@ -21,18 +21,22 @@ import api from '~/assets/api.js'
 export default {
   layout: 'layout',
   transition: 'page',
-  asyncData ({}){
-    return api.getNewsList().then(res=>{
-      return {list: res.data}
-    })
-  },
+  // asyncData ({}){
+  //   return api.getNewsList().then(res=>{
+  //     return {list: res.data}
+  //   })
+  // },
   data () {
     return {
       list:[]
     }
   },
   methods:{
-
+    getNews() {
+      return api.getNewsList().then(res=>{
+        this.list = res.data
+      })
+    }
   }
 }
 </script>
