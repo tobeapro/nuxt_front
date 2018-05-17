@@ -31,8 +31,11 @@ export default {
       list:[]
     }
   },
+  created () {
+    this.getNewsList()
+  },
   methods:{
-    getNews() {
+    getNewsList() {
       return api.getNewsList().then(res=>{
         this.list = res.data
       })
