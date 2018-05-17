@@ -1,6 +1,11 @@
 import axios from 'axios'
 import qs from 'qs'
-const host = 'http://localhost:4000/'
+let host
+if(process.env.NODE_ENV === 'development') {
+  host = 'http://localhost:4000/'
+} else if(process.env.NODE_ENV === 'production') {
+  host = '/'
+}
 export default {
   getInfo: (name) => {
     return new Promise((resolve,reject)=>{
