@@ -1,10 +1,10 @@
 import axios from 'axios'
 import qs from 'qs'
-let host
+let host = 'http://localhost:4000/'
 if(process.env.NODE_ENV === 'development') {
   host = 'http://localhost:4000/'
 } else if(process.env.NODE_ENV === 'production') {
-  host = '/'
+  host = 'http://118.25.177.196:4000/'
 }
 export default {
   getInfo: (name) => {
