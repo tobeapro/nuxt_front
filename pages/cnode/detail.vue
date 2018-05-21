@@ -58,6 +58,9 @@ export default {
   color:#80bd01;
   text-decoration: none;
 }
+.markdown-text code,.markdown-text table{
+  color:#666;
+}
 .markdown-text a:hover{
   text-decoration: underline;
 }

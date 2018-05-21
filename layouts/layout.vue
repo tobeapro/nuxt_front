@@ -19,6 +19,9 @@
       <main class="container">
         <div class="rk-main">
           <nuxt/>
+          <div class="to-top" :class="{'active':topStatus}" @click="toTop">
+            <p>回到顶部</p>
+          </div>
         </div>
       </main>
     </div>
@@ -38,6 +41,17 @@ export default {
       return '/'+this.$route.path.split('/')[1]
     }
   },
+  created () {
+    api.getInfo('admin').then(res=>{
+      this.info = res.data
+    })
+  },
+  mounted () {
+    window.addEventListener('scroll',this.scrollFun)
+  },
+  beforeDestory () {
+    window.removeEventListener('scroll',this.scrollFun)
+  },
   data () {
     return {
       info:{
@@ -50,13 +64,27 @@ export default {
         {name:'CNode',url:"/cnode"},
         {name:'新闻',url:"/news"},
         {name:'AC杂文',url:"/acfun"}
-      ]
+      ],
+      topStatus: false
     }
   },
-  created () {
-    api.getInfo('admin').then(res=>{
-      this.info = res.data
-    })
+  methods: {
+    scrollFun () {
+      if(window.scrollY > 300) {
+        this.topStatus = true
+      } else {
+        this.topStatus = false
+      }
+    },
+    toTop () {
+      let timer = setInterval(function(){
+        window.scrollTo(0,window.scrollY*0.9)
+        if(window.scrollY<=50){
+          window.scrollTo(0,0)
+          clearInterval(timer)
+        }
+      },10)
+    }
   }
 }
 </script>
@@ -122,5 +150,26 @@ export default {
   .nav-li a.active{
     color:#fff;
     background-color:#000;
+  }
+  .to-top{
+    transition: all .2s linear;
+    position:fixed;
+    right:-60px;
+    bottom:60px;
+    padding:6px 10px;
+    width:16px;
+    font-size:14px;
+    color:#aaa;
+    background-color:#fff;
+    border:1px solid #ddd;
+    border-radius: 4px;
+    cursor:pointer;
+  }
+  .to-top:hover{
+    color:#fff;
+    background-color: #1c99ff;
+  }
+  .to-top.active{
+    right:6px;
   }
 </style>
