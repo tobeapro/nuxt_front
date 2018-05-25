@@ -1,18 +1,20 @@
 <template>
-  <div class="news">
-    <ul class="news-nav">
-      <li class="news-nav-item" v-for="(item,index) in list" :key="index" :title="item.title">
-        <a :href="'#'+item._id">{{index+1}}·{{item.title}}</a>
-      </li>
-    </ul>
-    <div class="news-item" v-for="(item,index) in list" :key="index" :id="item._id">
-      <div class="news-item-title">
-        {{item.title}}
+  <div class="container">
+    <div class="news">
+      <ul class="news-nav">
+        <li class="news-nav-item" v-for="(item,index) in list" :key="index" :title="item.title">
+          <a :href="'#'+item._id">{{index+1}}·{{item.title}}</a>
+        </li>
+      </ul>
+      <div class="news-item" v-for="(item,index) in list" :key="index" :id="item._id">
+        <div class="news-item-title">
+          {{item.title}}
+        </div>
+        <div class="news-item-date">
+          {{item.date}}
+        </div>
+        <div class="news-item-content" v-html="item.content"></div>
       </div>
-      <div class="news-item-date">
-        {{item.date}}
-      </div>
-      <div class="news-item-content" v-html="item.content"></div>
     </div>
   </div>
 </template>

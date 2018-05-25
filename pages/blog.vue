@@ -1,23 +1,22 @@
 <template>
-  <div class="list">
-    <!-- <h2 class="subtitle">
-      project
-    </h2> -->
-    <div class="article">
-      <div class="article-item" v-for="(item,index) in list" :key="index">
-        <div class="article-title">
-          <div>{{item.title}}</div>
-          <div class="collapse" :class="{'active':viewIndex===index}" @click.stop="changeIndex(index)">
-            <i class="top"></i>
-            <i class="bottom"></i>
+  <div class="container">
+    <div class="common-box">
+      <div class="article">
+        <div class="article-item" v-for="(item,index) in list" :key="index">
+          <div class="article-title">
+            <div>{{item.title}}</div>
+            <div class="collapse" :class="{'active':viewIndex===index}" @click.stop="changeIndex(index)">
+              <i class="top"></i>
+              <i class="bottom"></i>
+            </div>
           </div>
-        </div>
-        <div class="article-content" v-show="viewIndex===index">
-          <div class="article-time">
-            <img src="~/assets/img/date.png" />
-            <span>{{new Date(item.create_time).toLocaleDateString()}}</span>
+          <div class="article-content" v-show="viewIndex===index">
+            <div class="article-time">
+              <img src="~/assets/img/date.png" />
+              <span>{{new Date(item.create_time).toLocaleDateString()}}</span>
+            </div>
+            <div  class="markdown-body" v-html="item.contentHtml"></div>
           </div>
-          <div  class="markdown-body" v-html="item.contentHtml"></div>
         </div>
       </div>
     </div>
@@ -31,7 +30,7 @@ export default {
   asyncData ({}){
     return api.getArticles('admin').then(res=>{
       let list = res.list.sort((now,next)=>{
-        return  new Date(next.create_time).getTime() - new Date(now.create_time).getTime() 
+        return  new Date(next.create_time).getTime() - new Date(now.create_time).getTime()
       })
       return {list: list}
     })

@@ -16,7 +16,7 @@
           </div>
         </div>
       </header>
-      <main class="container">
+      <main>
         <div class="rk-main">
           <nuxt/>
           <div class="to-top" :class="{'active':topStatus}" @click="toTop">
@@ -91,34 +91,6 @@ export default {
 <style>
 @import '~/assets/css/github.css';
 @import '~/assets/css/github-markdown.css';
-  *{
-    margin:0;
-    padding:0;
-  }
-  html{
-    background-color:#ecf5ff;
-  }
-  .container{
-    margin:0 auto;
-    width:100%;
-    max-width:960px;
-    height:100%;
-    background-color:#fff;
-  }
-  .rk-header{
-    position:fixed;
-    z-index:10;
-    top:0;
-    width:100%;
-    height:60px;
-    background-color:#fff;
-    box-shadow: 0 2px 10px #aaa;
-  }
-  .rk-main{
-    position:relative;
-    margin-top:80px;
-    min-height:calc(100vh - 100px);
-  }
   .user-info{
     display:flex;
     height:60px;
@@ -134,9 +106,6 @@ export default {
     margin-right:20px;
     width:40px;
     height:40px;
-  }
-  ul,li{
-    list-style: none;
   }
   .nav-li{
     display:inline-block;

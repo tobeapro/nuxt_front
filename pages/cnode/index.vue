@@ -1,20 +1,22 @@
 <template>
-  <div class="cnode">
-    <ul class="cnode-list">
-      <li class="cnode-item" v-for="(item,index) in list" :key="index">
-        <span class="avatar">
-          <img :src="item.author.avatar_url" />
-        </span>
-        <span>
-          <p class="title" @click="viewDetail(item.id)">
-            {{item.title}}
-          </p>
-          <p class="author">
-            作者:{{item.author.loginname}}——创建于:{{new Date(item.create_at).toLocaleDateString()}}
-          </p>
-        </span>
-      </li>
-    </ul>
+  <div class="container">
+    <div class="cnode">
+      <ul class="cnode-list">
+        <li class="cnode-item" v-for="(item,index) in list" :key="index">
+          <span class="avatar">
+            <img :src="item.author.avatar_url" />
+          </span>
+          <span>
+            <p class="title" @click="viewDetail(item.id)">
+              {{item.title}}
+            </p>
+            <p class="author">
+              作者:{{item.author.loginname}}——创建于:{{new Date(item.create_at).toLocaleDateString()}}
+            </p>
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 <script>

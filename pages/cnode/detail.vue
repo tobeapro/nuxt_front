@@ -1,20 +1,22 @@
 <template>
-  <div class="cnode">
-    <div class="cnode-detail-title">{{detail.title}}</div>
-    <div class="cnode-detail-author">
-      <span>作者:{{detail.author.loginname}}</span>
-      <span class="time">创建于:{{new Date(detail.create_at).toLocaleDateString()}}</span>
+  <div class="container">
+    <div class="cnode">
+      <div class="cnode-detail-title">{{detail.title}}</div>
+      <div class="cnode-detail-author">
+        <span>作者:{{detail.author.loginname}}</span>
+        <span class="time">创建于:{{new Date(detail.create_at).toLocaleDateString()}}</span>
+      </div>
+      <div class="markdown-body" v-html="detail.content"></div>
+      <ul class="cnode-comment">
+        <li class="cnode-comment-content" v-for="(item,index) in detail.replies" :key="index">
+          <img :src="item.author.avatar_url" />
+          <div>
+            <div class="info"><span class="author">{{item.author.loginname}}</span>{{new Date(item.create_at).toLocaleString()}}</div>
+            <div v-html="item.content"></div>
+          </div>
+        </li>
+      </ul>
     </div>
-    <div class="markdown-body" v-html="detail.content"></div>
-    <ul class="cnode-comment">
-      <li class="cnode-comment-content" v-for="(item,index) in detail.replies" :key="index">
-        <img :src="item.author.avatar_url" />
-        <div>
-          <div class="info"><span class="author">{{item.author.loginname}}</span>{{new Date(item.create_at).toLocaleString()}}</div>
-          <div v-html="item.content"></div>
-        </div>
-      </li>
-    </ul>
   </div>
 </template>
 <script>
