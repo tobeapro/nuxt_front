@@ -16,14 +16,10 @@
                 <i class="hair-4" style="position:absolute;transform:rotate(80deg);left:60px;top:-4px;width:100px;height:100px;border-left:4px solid #000;border-radius:50%;"></i>
               </div>
               <div class="face" style="position:relative;width:110px;height:100px;border:4px solid #000;border-radius:46px;background-color:#fff">
-                <div class="brow" style="position:absolute;top:26px;left:20px;">
-                  <i style="position:relative;float:left;width:14px;height:16px;border-top:4px solid #000;border-radius:16px;" >
-                    <i style="position:absolute;top:-2px;left:-1px;width:3px;height:3px;background-color:#000;border-radius:0 2px 2px 2px;"></i>
-                    <i style="position:absolute;top:-2px;right:-1px;width:3px;height:3px;background-color:#000;border-radius:0 2px 2px 2px;"></i>
+                <div class="brow" style="position:absolute;top:26px;left:14px;">
+                  <i style="position:relative;float:left;width:24px;height:24px;border-width:3px;border-style:solid;border-color:#000 transparent transparent transparent;border-radius:50%;">                
                   </i>
-                  <i style="position:relative;float:right;margin-left:28px;width:14px;height:16px;border-top:4px solid #000;border-radius:16px;" >
-                    <i style="position:absolute;top:-2px;left:-1px;width:3px;height:3px;background-color:#000;border-radius:0 2px 2px 2px;"></i>
-                    <i style="position:absolute;top:-2px;right:-1px;width:3px;height:3px;background-color:#000;border-radius:0 2px 2px 2px;"></i>
+                  <i style="position:relative;float:right;margin-left:18px;width:24px;height:24px;border-width:3px;border-style:solid;border-color:#000 transparent transparent transparent;border-radius:50%;">
                   </i>
                 </div>
                 <div class="eyes" style="position:absolute;top:40px;left:24px;">
@@ -34,10 +30,8 @@
                     <i class="eye" style="position:absolute;left:0;top:50%;transform:translateY(-50%);width:8px;height:8px;background-color:#000;border-radius:50%"></i>
                   </i>
                 </div>
-                <div class="mouse" style="position:absolute;top:40px;left:50%;transform:translateX(-50%)">
-                  <div style="position:relative;width:20px;height:20px;border-bottom:3px solid #000;border-radius:50%;">
-                    <i style="position:absolute;left:-1px;bottom:-1px;width:2px;height:8px;background-color:#fff;"></i>
-                    <i style="position:absolute;right:-1px;bottom:-1px;width:2px;height:8px;background-color:#fff;"></i>
+                <div class="mouse" style="position:absolute;top:22px;left:50%;transform:translateX(-50%)">
+                  <div style="position:relative;width:26px;height:40px;border-width:2px;border-style:solid;border-color:transparent transparent #000 transparent;border-radius:50%;">
                   </div>
                 </div>
                 <div class="cheek" style="position:absolute;width:100%;top:60px;left:50%;transform:translateX(-50%)">
@@ -51,6 +45,48 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="body" style="position:absolute;top:92px;left:0;width:110px;height:70px;background-color:#fff;overflow:hidden;">
+              <div class="body-left" style="position:absolute;transform:rotate(-10deg);left:12px;top:-20px;width:140px;height:180px;border-left:4px solid #000;border-radius:60px;">
+                <div style="transform:rotate(30deg);position:absolute;top:10px;left:18px;width:4px;height:2px;background-color:#000;"></div>
+              </div>
+              <div class="body-right" style="position:absolute;transform:rotate(10deg);right:12px;top:-20px;width:140px;height:180px;border-right:4px solid #000;border-radius:60px;">
+                <div style="transform:rotate(-6deg);position:absolute;top:9px;right:19px;width:4px;height:2px;background-color:#000;"></div>
+              </div>
+              <div class="hand-left" style="position:absolute;z-index:10;transform:rotate(-20deg);left:18px;top:10px;width:24px;height:24px;border-width:2px;border-style:solid;border-radius:15px;border-color:transparent #000 #000 transparent;">
+                <div style="transform:rotate(42deg);position:absolute;top:13px;left:-10px;width:16px;height:2px;background-color:#000;"></div>
+              </div>
+              <div class="hand-right" style="position:absolute;z-index:10;transform:rotate(-60deg);right:18px;top:10px;width:24px;height:24px;border-width:2px;border-style:solid;border-radius:15px;border-color:#000 transparent transparent #000;">
+                <div style="transform:rotate(30deg);position:absolute;top:21px;right:0px;width:20px;height:2px;background-color:#000;"></div>
+              </div>
+            </div>
+            <div class="heart" style="transform:translateX(-50%) scale(.8);position:absolute;top:90px;left:50%;width:38px;height:40px;">
+              <div style="position:absolute;left:-1px;top:0;width:20px;height:10px;border-radius:10px 10px 0 0;background-color:#ff4446"></div>
+              <div style="position:absolute;right:-1px;top:0;width:20px;height:10px;border-radius:10px 10px 0 0;background-color:#ff4446"></div>
+              <div style="position:absolute;top:9px;left:-1px;width:40px;height:22px;border-radius:0 0 22px 22px;background-color:#ff4446"></div>
+              <div style="transform:rotate(-10deg);position:absolute;right:6px;top:4px;width:4px;height:10px;border-radius:50%;border-right:4px solid #fff;"></div>
+              <div style="transform:rotate(-10deg);position:absolute;right:4px;top:16px;width:4px;height:4px;border-radius:50%;border-right:4px solid #fff;"></div>
+            </div>
+            <div class="heart-beat1" style="transform:scale(.6) rotate(-10deg);position:absolute;left:-40px;top:60px;width:38px;height:40px;">
+              <div style="position:absolute;left:-1px;top:0;width:20px;height:10px;border-radius:10px 10px 0 0;background-color:#ff4446"></div>
+              <div style="position:absolute;right:-1px;top:0;width:20px;height:10px;border-radius:10px 10px 0 0;background-color:#ff4446"></div>
+              <div style="position:absolute;top:9px;left:-1px;width:40px;height:22px;border-radius:0 0 22px 22px;background-color:#ff4446"></div>
+              <div style="transform:rotate(-10deg);position:absolute;right:6px;top:4px;width:4px;height:10px;border-radius:50%;border-right:4px solid #fff;"></div>
+              <div style="transform:rotate(-10deg);position:absolute;right:4px;top:16px;width:4px;height:4px;border-radius:50%;border-right:4px solid #fff;"></div>
+            </div>
+            <div class="heart-beat2" style="transform:scale(.4) rotate(-10deg);position:absolute;left:-30px;top:100px;width:38px;height:40px;">
+              <div style="position:absolute;left:-1px;top:0;width:20px;height:10px;border-radius:10px 10px 0 0;background-color:#ff4446"></div>
+              <div style="position:absolute;right:-1px;top:0;width:20px;height:10px;border-radius:10px 10px 0 0;background-color:#ff4446"></div>
+              <div style="position:absolute;top:9px;left:-1px;width:40px;height:22px;border-radius:0 0 22px 22px;background-color:#ff4446"></div>
+              <div style="transform:rotate(-10deg);position:absolute;right:6px;top:4px;width:4px;height:10px;border-radius:50%;border-right:4px solid #fff;"></div>
+              <div style="transform:rotate(-10deg);position:absolute;right:4px;top:16px;width:4px;height:4px;border-radius:50%;border-right:4px solid #fff;"></div>
+            </div>
+            <div class="heart-beat3" style="transform:scale(.4) rotate(20deg);position:absolute;right:-30px;top:60px;width:38px;height:40px;">
+              <div style="position:absolute;left:-1px;top:0;width:20px;height:10px;border-radius:10px 10px 0 0;background-color:#ff4446"></div>
+              <div style="position:absolute;right:-1px;top:0;width:20px;height:10px;border-radius:10px 10px 0 0;background-color:#ff4446"></div>
+              <div style="position:absolute;top:9px;left:-1px;width:40px;height:22px;border-radius:0 0 22px 22px;background-color:#ff4446"></div>
+              <div style="transform:rotate(-10deg);position:absolute;right:6px;top:4px;width:4px;height:10px;border-radius:50%;border-right:4px solid #fff;"></div>
+              <div style="transform:rotate(-10deg);position:absolute;right:4px;top:16px;width:4px;height:4px;border-radius:50%;border-right:4px solid #fff;"></div>
             </div>
           </div>
         </div>
@@ -187,14 +223,58 @@ export default {
 .hair-4:after{
   content:'';
   position:absolute;
-  transform: rotate(-50deg);
-  top:-30px;
+  transform: rotate(-52deg);
+  top:-200px;
   left:-20px;
   width:100px;
-  height:40px;
+  height:400px;
   background-color:#fff;
   border-radius:2px;
   overflow:hidden;
+}
+/* .body-left:after{
+  content:'';
+  transform: rotate(10deg);
+  position:absolute;
+  left:-6px;
+  top:50px;
+  width:4px;
+  height:40px;
+  border-radius:10px;
+  background-color:#000;
+}
+.body-right:after{
+  content:'';
+  position:absolute;
+  right:0;
+  top:0;
+  width:4px;
+  height:40px;
+  background-color:#000;
+} */
+.heart-beat1{
+  animation:heart-beat1 .3s infinite linear;
+}
+@keyframes heart-beat1 {
+  0% {transform:scale(.6) rotate(-10deg)}
+  80% {transform:scale(.68) rotate(-10deg)}
+  100% {transform:scale(.6) rotate(-10deg)}
+}
+.heart-beat2{
+  animation:heart-beat2 .3s infinite linear;
+}
+@keyframes heart-beat2 {
+  0% {transform:scale(.4) rotate(-10deg)}
+  80% {transform:scale(.48) rotate(-10deg)}
+  100% {transform:scale(.4) rotate(-10deg)}
+}
+.heart-beat3{
+  animation:heart-beat3 .3s infinite linear;
+}
+@keyframes heart-beat3 {
+  0% {transform:scale(.4) rotate(20deg)}
+  80% {transform:scale(.48) rotate(20deg)}
+  100% {transform:scale(.4) rotate(20deg)}
 }
 ::-webkit-scrollbar{
   display:none;
