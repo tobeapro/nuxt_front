@@ -4,7 +4,7 @@ let host = 'http://localhost:4000/'
 if(process.env.NODE_ENV === 'development') {
   host = 'http://localhost:4000/'
 } else if(process.env.NODE_ENV === 'production') {
-  host = 'http://118.25.177.196:4000/'
+  host = 'http://118.25.72.171:4000/'
 }
 export default {
   getInfo: (name) => {
